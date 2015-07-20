@@ -13,7 +13,7 @@ angular.module('filters.xbmc.asset', [])
       var regExp = new RegExp('image://([^/]*)');
       var matches = input.match(regExp);
       if(matches.length === 2) {
-        return 'http://' + securityPrefix + host.ip + ':'+host.httpPort+'/image/image://' + encodeURIComponent(matches[1])+'/';
+        return 'http://' + securityPrefix + host.ip + ':'+host.httpPort+'/image/' + encodeURIComponent('image://'+matches[1]+'/');
       }  
     } 
     return '';
